@@ -11,7 +11,7 @@ def read_soft(input_file):
     with open(input_file+'_lines.pkl', 'wb') as f:
         pickle.dump(lines, f)
     print("dumped file")
-    return lines
+    return lines 
     
 def load_lines(input_file):
     """loads lines variable from *_lines.pkl file"""
