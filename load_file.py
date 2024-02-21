@@ -1,7 +1,7 @@
 import pickle
 import os
 
-def read_soft(input_file):
+def read_file(input_file):
     """convert file into a list of lines
     Then dumps the list of lines as a pkl file"""
     with open(input_file,'r') as file:
@@ -19,7 +19,7 @@ def load_lines(input_file):
         lines = pickle.load(f)
     return lines
 
-def load_soft(input_file):
+def load_file(input_file):
     """gives list of lines for the soft file"""
     # check for _lines.pkl file
     if os.path.isfile(input_file+"_lines.pkl"):
@@ -27,4 +27,4 @@ def load_soft(input_file):
         return load_lines(input_file)
     else:
         print("lines.pkl file not found")
-        return read_soft(input_file)
+        return read_file(input_file)
